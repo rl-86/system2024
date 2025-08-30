@@ -2,7 +2,7 @@ import {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-import HomePage from './pages/HomePage.tsx'  // Lägg till denna
+import HomePage from './pages/HomePage.tsx'
 import UsersPage from "./pages/UsersPage.tsx";
 import LoginPage from "./pages/LoginPage.tsx";
 import {createBrowserRouter, RouterProvider,} from 'react-router-dom';
@@ -12,13 +12,13 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,
-        children: [  // Lägg till children här
+        children: [
             {
-                index: true,  // Detta gör att HomePage visas på "/"
+                index: true,
                 element: <HomePage />
             },
             {
-                path: 'login',  // Ändra från '/auth/login' till 'login'
+                path: 'login',
                 element: <LoginPage />
             },
             {
